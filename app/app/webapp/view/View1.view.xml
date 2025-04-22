@@ -5,7 +5,10 @@
     xmlns:form="sap.ui.layout.form">
     <Page id="page" title="Employee Management">
         <content>
-            <Button id="createEmployeeButton" text="Create Employee" press="onCreateEmployee"/>
+        <Toolbar id="_IDGenToolbar2">
+        <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+            <Button id="createEmployeeButton" text="Create New Employee" press="onCreateEmployee"/>
+            </Toolbar>
             <Dialog id="createEmployeeDialog" title="Create Employee">
                 <content>
                     <VBox id="_IDGenVBox">
@@ -50,19 +53,26 @@
                     <Column id="_IDGenColumn5">
                         <Text id="_IDGenText5" text="Salary"/>
                     </Column>
+                    <Column id="_IDGenColumn6">
+                        <Text id="_IDGenAction" text="Actions"/>
+                        </Column>
                 </columns>
-                <items>
-                    <ColumnListItem id="_IDGenColumnListItem">
-                        <cells>
-                            <Text id="_IDGenText6" text="{mainModel>ID}"/>
-                            <Text id="_IDGenText7" text="{mainModel>firstName}"/>
-                            <Text id="_IDGenText8" text="{mainModel>lastName}"/>
-                            <Text id="_IDGenText9" text="{mainModel>jobTitle}"/>
-                            <Text id="_IDGenText10" text="{mainModel>companyId_ID}"/>
-                            <Text id="_IDGenText11" text="{mainModel>salary}"/>
-                        </cells>
-                    </ColumnListItem>
-                </items>
+                <items>  
+<ColumnListItem id="_IDGenColumnListItem">
+     <cells>
+     <Text id="_IDGenText6" text="{mainModel>ID}"/>
+     <Text id="_IDGenText7" text="{mainModel>firstName}"/>
+     <Text id="_IDGenText8" text="{mainModel>lastName}"/>
+     <Text id="_IDGenText9" text="{mainModel>jobTitle}"/>
+     <Text id="_IDGenText10" text="{mainModel>companyId_ID}"/>
+ <Text id="_IDGenText11" text="{mainModel>salary}"/>
+<HBox id="_IDGenAction2">
+<Button id="deleteButton" text="Delete" press="onDeletePress"/>
+<Button id="UpdateButton" text="Update" press="onUpdatePress"/>
+                            </HBox>
+                             </cells>
+                             </ColumnListItem>
+                             </items>
             </Table>
         </content>
     </Page>
